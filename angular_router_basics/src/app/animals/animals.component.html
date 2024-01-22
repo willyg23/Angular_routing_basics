@@ -1,0 +1,17 @@
+<h1>
+    Animal List
+</h1>
+
+<ul>
+    <!-- //in parent component theres an array of documents pulled from firestore -->
+
+    <li *ngFor="let animal of animals$ | async"> <!--loop over elements asynchronously-->
+
+        <!-- putting brackets around routerLink lets you put in parameters -->
+        
+        <a [routerLink] = "['/animals', animal.name]" > </a>
+
+    </li>
+</ul>
+
+<router-outlet> </router-outlet>
